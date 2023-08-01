@@ -47,7 +47,7 @@ main {
 .navbar li:hover {
   cursor: pointer;
   background-color: #ce3939;
-  letter-spacing: 10px;
+  letter-spacing: 9px;
 }
 
 .hamburger {
