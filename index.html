@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <title>Prototipo</title>
+  <link rel="icon" href="img/LOGO-2021-TRANSPARENTE.png">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
         <div class="line"></div>
       </div>
       <menu class="navbar">
-        <ul>
+        <ul id="menu">
           <li>
             <a href="#Inicio"><b>Inicio</b></a>
           </li>
@@ -35,6 +36,11 @@
           </li>
           <li>
             <a href="#Paquetes"><b>Paquetes</b></a>
+            <ul>
+              <li><a href="">Paquete 1</a></li>
+              <li><a href="">Paquete 2</a></li>
+              <li><a href="">Paquete 3</a></li>
+            </ul>  
           </li>
           <li>
             <a href="#Contacto"><b>Contacto</b></a>
@@ -114,7 +120,7 @@
           <input type="email" placeholder="Correo electrónico" class="input input-50" />
           <input type="tel" placeholder="Número de telefono" class="input" maxlength="10" />
           <textarea placeholder="Mensaje" class="input"></textarea>
-          <input type="submit" value="Enviar mensaje" class="btn"/>
+          <input type="submit" value="Enviar mensaje" class="btn" />
         </form>
       </div>
     </div>

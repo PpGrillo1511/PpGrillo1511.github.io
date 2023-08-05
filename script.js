@@ -1,19 +1,19 @@
 gsap.to("#bg", {
   scrollTrigger: {
-      scrub: 1
+    scrub: 1
   },
   scale: 2.5
 })
 gsap.to("#logo", {
   scrollTrigger: {
-      scrub: 1
+    scrub: 1
   },
   scale: 0.5
 })
 
 gsap.to("#text", {
   scrollTrigger: {
-      scrub: 1
+    scrub: 1
   },
   y: 900
 })
@@ -42,7 +42,7 @@ function toggleMenu(event) {
 // Agregar evento de clic al botón de hamburguesa
 hamburger.addEventListener('click', toggleMenu);
 
-// Función para cerrar el menú y hacer el scroll suave al hacer clic en un enlace del navbar
+// Función para cerrar el menú al hacer clic en un enlace del navbar
 function closeMenuAndScroll(event) {
   event.stopPropagation(); // Detener la propagación del evento de clic
 
@@ -52,7 +52,7 @@ function closeMenuAndScroll(event) {
     setTimeout(() => {
       menu.classList.remove('active', 'closing');
       menu.style.display = "none";
-    }, 1);
+    }, 400);
   }
 
   // Obtener el elemento ancla (destino del enlace)
@@ -83,42 +83,34 @@ document.addEventListener('click', function (event) {
 
 // Función para abrir el modal y mostrar la imagen
 function openModal(imageSrc) {
-var modal = '<div class="modal" id="modal"><img src="' + imageSrc + '" class="modal__img"><div class="modal__boton" id="modal__boton">X</div></div>';
-$('body').append(modal);
+  var modal = '<div class="modal" id="modal"><img src="' + imageSrc + '" class="modal__img"><div class="modal__boton" id="modal__boton">X</div></div>';
+  $('body').append(modal);
 
-// Agregar evento de clic al fondo oscuro del modal
-$('#modal').click(function(event) {
-  if (event.target === this) {
+  // Agregar evento de clic al fondo oscuro del modal
+  $('#modal').click(function (event) {
+    if (event.target === this) {
+      closeModal();
+    }
+  });
+
+  $('#modal__boton').click(function () {
     closeModal();
-  }
-});
+  });
 
-$('#modal__boton').click(function () {
-  closeModal();
-});
-
-$(document).keyup(function (e) {
-  if (e.which == 27) {
-    closeModal();
-  }
-});
+  $(document).keyup(function (e) {
+    if (e.which == 27) {
+      closeModal();
+    }
+  });
 }
 
 // Función para cerrar el modal
 function closeModal() {
-$('#modal').remove();
+  $('#modal').remove();
 }
 
 // Agregar evento de clic a las imágenes de la galería
 $('.galeria__img').click(function (e) {
-var img = e.target.src;
-openModal(img);
+  var img = e.target.src;
+  openModal(img);
 });
-
-
-
-
-
-
-
-
