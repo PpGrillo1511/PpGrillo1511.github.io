@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
-  <title>Prototipo</title>
+  <title>KeyFrame Films</title>
   <link rel="icon" href="img/LOGO-2021-TRANSPARENTE.png">
 </head>
 
@@ -14,7 +17,9 @@
   <main>
     <section>
       <img src="./img/Amanecer.jpg" id="bg" />
+      <div id="hero-overlay"></div>
       <h1 id="text">KeyFrame Films</h1>
+      <p id="hero-subtitle">Producción cinematográfica y audiovisual</p>
       <img src="./img/LOGO-2021-TRANSPARENTE.png" id="logo" class="logo_class" />
     </section>
     <div class="sec">
@@ -43,50 +48,132 @@
         </ul>
       </menu>
       <div class="content" id="Inicio">
-        <h2>
-          En nombre de todo nuestro equipo, <br />
-          me gustaría darle la bienvenida a nuestro sitio web.</h2>
-        <p>
-          Nuestra productora se ha comprometido a ofrecer contenido
-          cautivador, emocionante y de alta calidad desde sus inicios. <br />
-          Aquí encontrarás un espacio dedicado a la creatividad, la innovación
-          y la ilusión por la producción cinematográfica y audiovisual.
-          <br \ /><br \ />
-          ¡Esperamos que disfrutes de tu visita y que te emociones tanto como
-          nosotros con nuestro apasionante universo cinematográfico!
-        </p>
+        <div class="content-inner fade-in">
+          <span class="section-tag">Bienvenidos</span>
+          <h2>
+            En nombre de todo nuestro equipo, <br />
+            me gustaría darle la bienvenida a nuestro sitio web.</h2>
+          <p>
+            Nuestra productora se ha comprometido a ofrecer contenido
+            cautivador, emocionante y de alta calidad desde sus inicios. <br />
+            Aquí encontrarás un espacio dedicado a la creatividad, la innovación
+            y la ilusión por la producción cinematográfica y audiovisual.
+            <br /><br />
+            ¡Esperamos que disfrutes de tu visita y que te emociones tanto como
+            nosotros con nuestro apasionante universo cinematográfico!
+          </p>
+          <a href="#Portafolio" class="cta-btn">Ver Portafolio</a>
+        </div>
       </div>
-      <div id="Portafolio">
+      <div id="Servicios" class="fade-in">
+        <h2>Servicios</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa fa-camera"></i></div>
+            <h3>Fotografía</h3>
+            <p>Sesiones fotográficas profesionales para bodas, embarazo, quince años y eventos especiales.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa fa-video-camera"></i></div>
+            <h3>Video</h3>
+            <p>Producción de video de alta calidad para eventos, publicidad y proyectos creativos.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa fa-film"></i></div>
+            <h3>Edición</h3>
+            <p>Posproducción y edición cinematográfica con efectos visuales y corrección de color.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa fa-music"></i></div>
+            <h3>Sonido</h3>
+            <p>Diseño de audio, musicalización y mezcla profesional para tus producciones.</p>
+          </div>
+        </div>
+      </div>
+      <div id="Paquetes" class="fade-in">
+        <h2>Paquetes</h2>
+        <div class="packages-grid">
+          <div class="package-card">
+            <div class="package-header">
+              <h3>Básico</h3>
+              <div class="package-price">Consultar</div>
+            </div>
+            <ul class="package-features">
+              <li><i class="fa fa-check"></i> 2 horas de sesión</li>
+              <li><i class="fa fa-check"></i> 30 fotos editadas</li>
+              <li><i class="fa fa-check"></i> Entrega digital</li>
+            </ul>
+            <a href="#Contacto" class="package-btn">Solicitar</a>
+          </div>
+          <div class="package-card featured">
+            <div class="package-badge">Popular</div>
+            <div class="package-header">
+              <h3>Completo</h3>
+              <div class="package-price">Consultar</div>
+            </div>
+            <ul class="package-features">
+              <li><i class="fa fa-check"></i> 5 horas de sesión</li>
+              <li><i class="fa fa-check"></i> 80 fotos editadas</li>
+              <li><i class="fa fa-check"></i> Video highlights</li>
+              <li><i class="fa fa-check"></i> Entrega digital + álbum</li>
+            </ul>
+            <a href="#Contacto" class="package-btn">Solicitar</a>
+          </div>
+          <div class="package-card">
+            <div class="package-header">
+              <h3>Premium</h3>
+              <div class="package-price">Consultar</div>
+            </div>
+            <ul class="package-features">
+              <li><i class="fa fa-check"></i> Cobertura completa</li>
+              <li><i class="fa fa-check"></i> Fotos ilimitadas</li>
+              <li><i class="fa fa-check"></i> Video cinematográfico</li>
+              <li><i class="fa fa-check"></i> Drone</li>
+              <li><i class="fa fa-check"></i> Álbum de lujo</li>
+            </ul>
+            <a href="#Contacto" class="package-btn">Solicitar</a>
+          </div>
+        </div>
+      </div>
+      <div id="Portafolio" class="fade-in">
         <h2>Portafolio</h2>
         <ul class="galeria">
           <li class="galeria__item">
             <img src="https://i.bssl.es/unomasenlafamilia/2020/12/sesion-de-fotos-de-embarazo.jpg"
               class="galeria__img" />
+            <div class="galeria__overlay"><span>Embarazo</span></div>
           </li>
           <li class="galeria__item">
             <img src="https://i.bssl.es/unomasenlafamilia/2020/12/sesion-de-fotos-embarazo.jpg" class="galeria__img" />
+            <div class="galeria__overlay"><span>Maternidad</span></div>
           </li>
           <li class="galeria__item">
             <img
               src="https://www.cronoshare.com/blog/wp-content/uploads/2019/08/Cu%C3%A1nto-cuesta-un-book-de-fotos.jpeg"
               class="galeria__img" />
+            <div class="galeria__overlay"><span>Book Fotográfico</span></div>
           </li>
           <li class="galeria__item">
             <img src="https://dsl79gb82nx3q.cloudfront.net/media/uploads/zinnia/2020/05/15/boda_recien_casados.jpg"
               class="galeria__img" />
+            <div class="galeria__overlay"><span>Bodas</span></div>
           </li>
           <li class="galeria__item">
             <img src="https://www.xtrafondos.com/wallpapers/cara-de-billie-eilish-5195.jpg" class="galeria__img" />
+            <div class="galeria__overlay"><span>Retrato</span></div>
           </li>
           <li class="galeria__item">
             <img src="https://www.xtrafondos.com/wallpapers/rosalia-con-flor-4150.jpg" class="galeria__img" />
+            <div class="galeria__overlay"><span>Retrato Artístico</span></div>
           </li>
           <li class="galeria__item">
             <img src="https://www.xtrafondos.com/wallpapers/dua-lipa-4474.jpg" class="galeria__img" />
+            <div class="galeria__overlay"><span>Moda</span></div>
           </li>
           <li class="galeria__item">
-            <img src="https://www.xtrafondos.com/wallpapers/margot-robbie-en-escala-de-grises-3778.jpg "
+            <img src="https://www.xtrafondos.com/wallpapers/margot-robbie-en-escala-de-grises-3778.jpg"
               class="galeria__img" />
+            <div class="galeria__overlay"><span>Cine</span></div>
           </li>
         </ul>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -94,11 +181,15 @@
     </div>
   </main>
   <div id="lastray" class="element"></div>
+  <button id="scrollTop" title="Volver arriba"><i class="fa fa-chevron-up"></i></button>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
   <script src="./script.js"></script>
 </body>
 <footer id="Contacto">
+  <div class="footer-wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80"><path fill="#18191f" fill-opacity="1" d="M0,40L48,45C96,50,192,60,288,58C384,56,480,42,576,36C672,30,768,32,864,38C960,44,1056,54,1152,54C1248,54,1344,46,1392,42L1440,38L1440,80L1392,80C1344,80,1248,80,1152,80C1056,80,960,80,864,80C768,80,672,80,576,80C480,80,384,80,288,80C192,80,96,80,48,80L0,80Z"></path></svg>
+  </div>
   <div class="container2">
     <div class="card">
       <div class="card-header">
@@ -131,6 +222,9 @@
       class="fa fa-envelope-square email" id="email"></a>
     <a href="https://www.facebook.com/AgenciaKeyframeFilms?mibextid=ZbWKwL" target="_blank"
       class="fa fa-facebook-square" id="facebook"></a>
+  </div>
+  <div class="footer-copy">
+    <p>&copy; 2024 KeyFrame Films. Todos los derechos reservados.</p>
   </div>
 </footer>
 
