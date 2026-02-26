@@ -114,3 +114,28 @@ $('.galeria__img').click(function (e) {
   var img = e.target.src;
   openModal(img);
 });
+
+// Scroll-to-top button
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 400) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+});
+scrollTopBtn.addEventListener('click', function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Fade-in on scroll using IntersectionObserver
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+fadeEls.forEach(function (el) { observer.observe(el); });
